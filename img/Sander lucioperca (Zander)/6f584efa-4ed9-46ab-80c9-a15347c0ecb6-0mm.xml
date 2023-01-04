@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Sander lucioperca</folder>
+	<filename>6f584efa-4ed9-46ab-80c9-a15347c0ecb6-0mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Sander lucioperca\6f584efa-4ed9-46ab-80c9-a15347c0ecb6-0mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>727</width>
+		<height>261</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Sander lucioperca</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>707</xmax>
+                <ymax>241</ymax>
+            </bndbox>
+        </object>
+    </annotation>

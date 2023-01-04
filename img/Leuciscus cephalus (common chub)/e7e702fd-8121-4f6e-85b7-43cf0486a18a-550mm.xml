@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Leuciscus cephalus</folder>
+	<filename>e7e702fd-8121-4f6e-85b7-43cf0486a18a-550mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Leuciscus cephalus\e7e702fd-8121-4f6e-85b7-43cf0486a18a-550mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>742</width>
+		<height>253</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Leuciscus cephalus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>9</xmin>
+                <ymin>20</ymin>
+                <xmax>722</xmax>
+                <ymax>233</ymax>
+            </bndbox>
+        </object>
+    </annotation>

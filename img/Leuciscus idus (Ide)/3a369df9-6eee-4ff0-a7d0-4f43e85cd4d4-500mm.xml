@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Leuciscus idus</folder>
+	<filename>3a369df9-6eee-4ff0-a7d0-4f43e85cd4d4-500mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Leuciscus idus\3a369df9-6eee-4ff0-a7d0-4f43e85cd4d4-500mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>760</width>
+		<height>273</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Leuciscus idus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>740</xmax>
+                <ymax>253</ymax>
+            </bndbox>
+        </object>
+    </annotation>

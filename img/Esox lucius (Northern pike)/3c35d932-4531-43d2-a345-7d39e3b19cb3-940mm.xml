@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Esox lucius</folder>
+	<filename>3c35d932-4531-43d2-a345-7d39e3b19cb3-940mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Esox lucius\3c35d932-4531-43d2-a345-7d39e3b19cb3-940mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>677</width>
+		<height>566</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Esox lucius</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>677</xmax>
+                <ymax>546</ymax>
+            </bndbox>
+        </object>
+    </annotation>

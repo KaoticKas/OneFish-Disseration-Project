@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Blicca bjoerkna</folder>
+	<filename>2b9eed46-25fb-438b-b7a8-fb4cb7a0a611-280mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Blicca bjoerkna\2b9eed46-25fb-438b-b7a8-fb4cb7a0a611-280mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>679</width>
+		<height>297</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Blicca bjoerkna</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>659</xmax>
+                <ymax>277</ymax>
+            </bndbox>
+        </object>
+    </annotation>

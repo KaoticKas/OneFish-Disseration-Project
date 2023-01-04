@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Cyprinus carpio</folder>
+	<filename>ff23e3aa-3989-4088-97b6-05b193d0deb5-0mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Cyprinus carpio\ff23e3aa-3989-4088-97b6-05b193d0deb5-0mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>625</width>
+		<height>218</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Cyprinus carpio</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>605</xmax>
+                <ymax>198</ymax>
+            </bndbox>
+        </object>
+    </annotation>

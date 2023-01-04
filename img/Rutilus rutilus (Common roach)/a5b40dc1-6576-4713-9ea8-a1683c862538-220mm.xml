@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Rutilus rutilus</folder>
+	<filename>a5b40dc1-6576-4713-9ea8-a1683c862538-220mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Rutilus rutilus\a5b40dc1-6576-4713-9ea8-a1683c862538-220mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>593</width>
+		<height>227</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Rutilus rutilus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>573</xmax>
+                <ymax>207</ymax>
+            </bndbox>
+        </object>
+    </annotation>

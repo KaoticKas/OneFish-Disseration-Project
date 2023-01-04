@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Neogobius kessleri</folder>
+	<filename>93fa2a60-9302-4191-83f3-130fd972a623-120mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Neogobius kessleri\93fa2a60-9302-4191-83f3-130fd972a623-120mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>519</width>
+		<height>203</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Neogobius kessleri</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>499</xmax>
+                <ymax>183</ymax>
+            </bndbox>
+        </object>
+    </annotation>

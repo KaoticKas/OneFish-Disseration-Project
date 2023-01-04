@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Silurus glanis</folder>
+	<filename>0ffc4cce-48d8-47c4-ac49-a548922b8ce8-1000mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Silurus glanis\0ffc4cce-48d8-47c4-ac49-a548922b8ce8-1000mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>560</width>
+		<height>241</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Silurus glanis</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>540</xmax>
+                <ymax>221</ymax>
+            </bndbox>
+        </object>
+    </annotation>

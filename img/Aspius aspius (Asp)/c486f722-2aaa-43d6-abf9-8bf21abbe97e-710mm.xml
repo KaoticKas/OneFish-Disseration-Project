@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Aspius aspius</folder>
+	<filename>c486f722-2aaa-43d6-abf9-8bf21abbe97e-710mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Aspius aspius\c486f722-2aaa-43d6-abf9-8bf21abbe97e-710mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>772</width>
+		<height>289</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Aspius aspius</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>752</xmax>
+                <ymax>289</ymax>
+            </bndbox>
+        </object>
+    </annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Carassius gibelio</folder>
+	<filename>dda13383-f293-4e4b-93b7-0a24928bbf91-260mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Carassius gibelio\dda13383-f293-4e4b-93b7-0a24928bbf91-260mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>314</width>
+		<height>748</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Carassius gibelio</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>294</xmax>
+                <ymax>728</ymax>
+            </bndbox>
+        </object>
+    </annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Carassius carassius</folder>
+	<filename>35ce2067-2ad4-4e1b-a8c9-8d6cdf28d632-400mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Carassius carassius\35ce2067-2ad4-4e1b-a8c9-8d6cdf28d632-400mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>768</width>
+		<height>430</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Carassius carassius</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>19</xmin>
+                <ymin>20</ymin>
+                <xmax>751</xmax>
+                <ymax>430</ymax>
+            </bndbox>
+        </object>
+    </annotation>

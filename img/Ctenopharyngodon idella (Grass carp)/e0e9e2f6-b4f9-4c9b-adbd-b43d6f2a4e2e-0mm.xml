@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Ctenopharyngodon idella</folder>
+	<filename>e0e9e2f6-b4f9-4c9b-adbd-b43d6f2a4e2e-0mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Ctenopharyngodon idella\e0e9e2f6-b4f9-4c9b-adbd-b43d6f2a4e2e-0mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>770</width>
+		<height>232</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Ctenopharyngodon idella</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>770</xmax>
+                <ymax>231</ymax>
+            </bndbox>
+        </object>
+    </annotation>

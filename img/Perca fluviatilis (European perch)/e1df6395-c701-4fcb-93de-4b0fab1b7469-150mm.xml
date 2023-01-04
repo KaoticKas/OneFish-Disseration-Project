@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Perca fluviatilis</folder>
+	<filename>e1df6395-c701-4fcb-93de-4b0fab1b7469-150mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Perca fluviatilis\e1df6395-c701-4fcb-93de-4b0fab1b7469-150mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>413</width>
+		<height>848</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Perca fluviatilis</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>393</xmax>
+                <ymax>828</ymax>
+            </bndbox>
+        </object>
+    </annotation>

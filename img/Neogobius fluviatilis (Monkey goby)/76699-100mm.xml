@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Neogobius fluviatilis</folder>
+	<filename>76699-100mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Neogobius fluviatilis\76699-100mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>575</width>
+		<height>219</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Neogobius fluviatilis</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>555</xmax>
+                <ymax>199</ymax>
+            </bndbox>
+        </object>
+    </annotation>

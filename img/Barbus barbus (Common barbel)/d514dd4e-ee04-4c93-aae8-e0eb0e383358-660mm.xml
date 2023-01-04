@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Barbus barbus</folder>
+	<filename>d514dd4e-ee04-4c93-aae8-e0eb0e383358-660mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Barbus barbus\d514dd4e-ee04-4c93-aae8-e0eb0e383358-660mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>748</width>
+		<height>254</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Barbus barbus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>10</xmin>
+                <ymin>4</ymin>
+                <xmax>728</xmax>
+                <ymax>234</ymax>
+            </bndbox>
+        </object>
+    </annotation>

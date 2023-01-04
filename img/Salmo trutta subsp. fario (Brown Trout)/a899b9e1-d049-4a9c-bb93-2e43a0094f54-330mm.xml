@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Salmo trutta subsp. fario</folder>
+	<filename>a899b9e1-d049-4a9c-bb93-2e43a0094f54-330mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Salmo trutta subsp. fario\a899b9e1-d049-4a9c-bb93-2e43a0094f54-330mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>350</width>
+		<height>173</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Salmo trutta subsp. fario</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>330</xmax>
+                <ymax>153</ymax>
+            </bndbox>
+        </object>
+    </annotation>

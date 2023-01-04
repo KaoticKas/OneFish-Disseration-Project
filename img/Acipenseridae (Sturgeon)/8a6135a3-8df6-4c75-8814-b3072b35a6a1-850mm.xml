@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Acipenseridae</folder>
+	<filename>8a6135a3-8df6-4c75-8814-b3072b35a6a1-850mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Acipenseridae\8a6135a3-8df6-4c75-8814-b3072b35a6a1-850mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>764</width>
+		<height>372</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Acipenseridae</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>744</xmax>
+                <ymax>352</ymax>
+            </bndbox>
+        </object>
+    </annotation>

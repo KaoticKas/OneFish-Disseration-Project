@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Anguilla anguilla</folder>
+	<filename>20d27457-8755-496d-b7e2-51ce2c14b531-530mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Anguilla anguilla\20d27457-8755-496d-b7e2-51ce2c14b531-530mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>111</width>
+		<height>498</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Anguilla anguilla</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>91</xmax>
+                <ymax>478</ymax>
+            </bndbox>
+        </object>
+    </annotation>

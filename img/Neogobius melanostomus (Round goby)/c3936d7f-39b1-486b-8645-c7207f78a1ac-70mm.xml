@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Neogobius melanostomus</folder>
+	<filename>c3936d7f-39b1-486b-8645-c7207f78a1ac-70mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Neogobius melanostomus\c3936d7f-39b1-486b-8645-c7207f78a1ac-70mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>241</width>
+		<height>625</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Neogobius melanostomus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>221</xmax>
+                <ymax>605</ymax>
+            </bndbox>
+        </object>
+    </annotation>

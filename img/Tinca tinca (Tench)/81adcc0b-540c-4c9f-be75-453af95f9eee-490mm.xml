@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Tinca tinca</folder>
+	<filename>81adcc0b-540c-4c9f-be75-453af95f9eee-490mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Tinca tinca\81adcc0b-540c-4c9f-be75-453af95f9eee-490mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>765</width>
+		<height>301</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Tinca tinca</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>745</xmax>
+                <ymax>292</ymax>
+            </bndbox>
+        </object>
+    </annotation>

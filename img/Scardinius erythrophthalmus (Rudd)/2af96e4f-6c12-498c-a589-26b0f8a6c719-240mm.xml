@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Scardinius erythrophthalmus</folder>
+	<filename>2af96e4f-6c12-498c-a589-26b0f8a6c719-240mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Scardinius erythrophthalmus\2af96e4f-6c12-498c-a589-26b0f8a6c719-240mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>325</width>
+		<height>862</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Scardinius erythrophthalmus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>305</xmax>
+                <ymax>842</ymax>
+            </bndbox>
+        </object>
+    </annotation>

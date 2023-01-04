@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Lepomis gibbosus</folder>
+	<filename>26b0aba9-c06b-4f3c-a7b3-bb593afba186-0mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Lepomis gibbosus\26b0aba9-c06b-4f3c-a7b3-bb593afba186-0mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>664</width>
+		<height>305</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Lepomis gibbosus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>644</xmax>
+                <ymax>285</ymax>
+            </bndbox>
+        </object>
+    </annotation>

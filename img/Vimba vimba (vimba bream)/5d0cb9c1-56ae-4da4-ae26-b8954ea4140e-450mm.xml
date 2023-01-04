@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Vimba vimba</folder>
+	<filename>5d0cb9c1-56ae-4da4-ae26-b8954ea4140e-450mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Vimba vimba\5d0cb9c1-56ae-4da4-ae26-b8954ea4140e-450mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>733</width>
+		<height>333</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Vimba vimba</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>1</xmin>
+                <ymin>20</ymin>
+                <xmax>713</xmax>
+                <ymax>313</ymax>
+            </bndbox>
+        </object>
+    </annotation>

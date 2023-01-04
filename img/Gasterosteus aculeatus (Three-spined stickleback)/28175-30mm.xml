@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Gasterosteus aculeatus</folder>
+	<filename>28175-30mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Gasterosteus aculeatus\28175-30mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>115</width>
+		<height>63</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Gasterosteus aculeatus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>95</xmax>
+                <ymax>43</ymax>
+            </bndbox>
+        </object>
+    </annotation>

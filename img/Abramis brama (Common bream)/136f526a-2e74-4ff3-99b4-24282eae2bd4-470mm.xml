@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Abramis brama</folder>
+	<filename>136f526a-2e74-4ff3-99b4-24282eae2bd4-470mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Abramis brama\136f526a-2e74-4ff3-99b4-24282eae2bd4-470mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>428</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Abramis brama</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>1</xmin>
+                <ymin>1</ymin>
+                <xmax>787</xmax>
+                <ymax>408</ymax>
+            </bndbox>
+        </object>
+    </annotation>

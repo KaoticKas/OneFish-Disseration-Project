@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Gobio gobio</folder>
+	<filename>1e33dfb4-6a19-4e33-b3f0-3d85d7106c94-120mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Gobio gobio\1e33dfb4-6a19-4e33-b3f0-3d85d7106c94-120mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>635</width>
+		<height>254</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Gobio gobio</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>1</xmin>
+                <ymin>20</ymin>
+                <xmax>615</xmax>
+                <ymax>234</ymax>
+            </bndbox>
+        </object>
+    </annotation>

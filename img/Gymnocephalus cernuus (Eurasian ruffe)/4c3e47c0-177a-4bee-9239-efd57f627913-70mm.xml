@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Gymnocephalus cernuus</folder>
+	<filename>4c3e47c0-177a-4bee-9239-efd57f627913-70mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Gymnocephalus cernuus\4c3e47c0-177a-4bee-9239-efd57f627913-70mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>386</width>
+		<height>820</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Gymnocephalus cernuus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>366</xmax>
+                <ymax>800</ymax>
+            </bndbox>
+        </object>
+    </annotation>

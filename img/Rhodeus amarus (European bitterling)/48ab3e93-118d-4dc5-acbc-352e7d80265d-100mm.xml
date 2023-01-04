@@ -1,0 +1,26 @@
+<annotation>
+	<folder>D:\AI\SVR-dataset\2022-02\2. public\dataset\Rhodeus amarus</folder>
+	<filename>48ab3e93-118d-4dc5-acbc-352e7d80265d-100mm.jpg</filename>
+	<path>D:\AI\SVR-dataset\2022-02\2. public\dataset\Rhodeus amarus\48ab3e93-118d-4dc5-acbc-352e7d80265d-100mm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>613</width>
+		<height>395</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+    <object>
+            <name>Rhodeus amarus</name>
+            <pose>Unspecified</pose>
+            <truncated>0</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>20</xmin>
+                <ymin>20</ymin>
+                <xmax>593</xmax>
+                <ymax>375</ymax>
+            </bndbox>
+        </object>
+    </annotation>
