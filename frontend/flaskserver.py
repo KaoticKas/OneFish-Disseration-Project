@@ -1,7 +1,4 @@
 import os
-import uuid
-import flask
-import urllib
 from PIL import Image
 from tensorflow.keras.models import load_model
 from flask import Flask , render_template  , request , send_file
@@ -29,7 +26,7 @@ def rcnnModel():
     return render_template('model.html', title = title)
 
 
-@app.route('/result')
+@app.route('/result', methods =["POST"])
 def result():
     
     return render_template('result.html')

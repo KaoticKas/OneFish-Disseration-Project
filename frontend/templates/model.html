@@ -4,10 +4,9 @@
     <div class="container">
       <h1>This is a {{title}} page</h1>
     </div>
-    <div class="upload-section">
 
-      <div class="upload-file">
-          <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+      <div class="input-group">
+          <form class = "file-form" action="{{ url_for('result')}}" method="post", enctype="multipart/form-data">
               <input class="file-form-input" type="file" , name = "file"/>
               <button class="btn btn-secondary btn-lg">Upload</button> 
           </form>
@@ -17,5 +16,4 @@
               <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
             </div>
           -->
-  </div>
 {%endblock%}
