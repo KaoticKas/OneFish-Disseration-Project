@@ -15,12 +15,19 @@ def home():
 
 @app.route('/model')
 def cnnModel():
-    return render_template('model.html')
+    title = 'CNN Model'
+    return render_template('model.html', title = title)
+
 @app.route('/transferModel')
 def transferModel():
-    return True
+    title = 'Transfer Model'
+    return render_template('model.html', title = title)
+
 @app.route('/rCNNModel')
 def rcnnModel():
-    return True
+    title = 'RCNN Model'
+    return render_template('model.html', title = title)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000,debug = True)
