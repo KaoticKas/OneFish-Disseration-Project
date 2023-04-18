@@ -88,27 +88,26 @@ def rcnnModel():
 
 @app.route('/result', methods =["GET","POST"])
 def result():
-    if request.method == 'POST':
     #target_img = os.path.join(os.getcwd() , 'static/images')
-        target_img = (r"C:\Users\Kacper\Desktop\github\CIFAR-10-image-classification\CIFAR-10-image-classification\static")
-        file = request.files['file']
-        if file and allowed_file(file.filename):
-            file.save(os.path.join(target_img , file.filename))
-            img_path = os.path.join(target_img , file.filename)
-            img = file.filename
+    target_img = (r"C:\Users\Kacper\Desktop\github\CIFAR-10-image-classification\CIFAR-10-image-classification\static")
+    file = request.files['file']
+    if file and allowed_file(file.filename):
+        file.save(os.path.join(target_img , file.filename))
+        img_path = os.path.join(target_img , file.filename)
+        img = file.filename
     #Loads the file name into a static/images folder to be used for the prediction 
-        if request.referrer.endswith('/model'):
-            model = models['CNN Model']
-            img_size = 256
-        elif request.referrer.endswith('/transferModel'):
-            model = models['Transfer Model']
-            img_size = 224
-        elif request.referrer.endswith('/rCNNModel'):
-            model = models['RCNN Model']
-            img_size = 256
+    if request.referrer.endswith('/model'):
+        model = models['CNN Model']
+        img_size = 256
+    elif request.referrer.endswith('/transferModel'):
+        model = models['Transfer Model']
+        img_size = 224
+    elif request.referrer.endswith('/rCNNModel'):
+        model = models['RCNN Model']
+        img_size = 256
     # if else statement to determin which model to laod
-        class_result , prob_result = predict(img_path , model, img_size)
-        predictions = {
+    class_result , prob_result = predict(img_path , model, img_size)
+    predictions = {
         "class1":class_result[0],
         "class2":class_result[1],
         "class3":class_result[2],
@@ -116,8 +115,8 @@ def result():
         "prob2": prob_result[1],
         "prob3": prob_result[2],}
     #produces a list of predictions
-        return render_template('result.html', img = img, predictions = predictions)
-    else:
-        return 404
+    return render_template('result.html', img = img, predictions = predictions)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000,debug = True)
