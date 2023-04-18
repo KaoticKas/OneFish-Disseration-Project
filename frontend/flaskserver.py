@@ -10,9 +10,11 @@ app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ALLOWED_EXT = set(['jpg' , 'jpeg' , 'png' , 'jfif'])
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXT
+#checks if the file passed to the server is of a required type
 
 
 img_dir = "C:/Users/Kacper/Desktop/github/OneFish-Disseration-Project/Model/img"
@@ -21,34 +23,38 @@ classes =[] # creates categories based on the names of the folders
 
 for x in os.listdir(img_dir):
     classes.append(x)
+# makes a list of fish species based on folder names
 
 models = {}  # create a dictionary to hold the models
 
 def predict(filename , model):
+    num_probablities = 3
     img = load_img(filename , target_size = (224 , 224))
     img = img_to_array(img)
     img = img.reshape(1 , 224 ,224 ,3)
-
+    # loads the image and resizes it to what the models were trained on
     img = img.astype('float32')
     img = img/255.0
     result = model.predict(img)
-
+    #normalises the image and passes it to the model
     dict_result = {}
     for i in range(30):
         dict_result[result[0][i]] = classes[i]
-
+    #takes the model results and makes a dictonary with the key being the class name
     res = result[0]
     res.sort()
     res = res[::-1]
-    prob = res[:3]
+    prob = res[:num_probablities]
     
     prob_result = []
     class_result = []
-    for i in range(3):
+    for i in range(num_probablities):
         prob_result.append((prob[i]*100).round(2))
         class_result.append(dict_result[prob[i]])
-
+    # makes two lists with the percentage probablility of the image and what top 3 classes it is.
     return class_result , prob_result
+
+# underneath are a list of routes that the server takes based on the urls. Most of the routes are Get pages as no data is expected to return
 
 @app.route('/') # routes to the front page
 
@@ -88,14 +94,14 @@ def result():
         file.save(os.path.join(target_img , file.filename))
         img_path = os.path.join(target_img , file.filename)
         img = file.filename
-
+    #Loads the file name into a static/images folder to be used for the prediction 
     if request.referrer.endswith('/model'):
         model = models['CNN Model']
     elif request.referrer.endswith('/transferModel'):
         model = models['Transfer Model']
     elif request.referrer.endswith('/rCNNModel'):
         model = models['RCNN Model']
-
+    # if else statement to determin which model to laod
     class_result , prob_result = predict(img_path , model)
     predictions = {
         "class1":class_result[0],
@@ -104,7 +110,7 @@ def result():
         "prob1": prob_result[0],
         "prob2": prob_result[1],
         "prob3": prob_result[2],}
-
+    #produces a list of predictions
     return render_template('result.html', img = img, predictions = predictions)
 
 if __name__ == "__main__":
