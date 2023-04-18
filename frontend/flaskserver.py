@@ -27,11 +27,11 @@ for x in os.listdir(img_dir):
 
 models = {}  # create a dictionary to hold the models
 
-def predict(filename , model):
+def predict(filename , model, img_size):
     num_probablities = 3
-    img = load_img(filename , target_size = (224 , 224))
+    img = load_img(filename , target_size = (img_size , img_size))
     img = img_to_array(img)
-    img = img.reshape(1 , 224 ,224 ,3)
+    img = img.reshape(1 , img_size ,img_size ,3)
     # loads the image and resizes it to what the models were trained on
     img = img.astype('float32')
     img = img/255.0
@@ -65,7 +65,7 @@ def home():
 
 def cnnModel():
     title = 'CNN Model'
-    models[title] = load_model(os.path.join(BASE_DIR , 'modelt.hdf5'))
+    models[title] = load_model(os.path.join(BASE_DIR , 'modelV3.hdf5'))
 
     return render_template('model.html', title = title )
 
@@ -73,7 +73,7 @@ def cnnModel():
 
 def transferModel():
     title = 'Transfer Model'
-    models[title] = load_model(os.path.join(BASE_DIR , 'modelt.hdf5'))
+    models[title] = load_model(os.path.join(BASE_DIR , 'modelTransfer.hdf5'))
 
     return render_template('model.html', title = title)
 
@@ -82,28 +82,33 @@ def transferModel():
 def rcnnModel():
     title = 'RCNN Model'
 
-    models[title] = load_model(os.path.join(BASE_DIR , 'modelt.hdf5'))
+    models[title] = load_model(os.path.join(BASE_DIR , 'modelV3.hdf5'))
     return render_template('model.html', title = title)
 
 
 @app.route('/result', methods =["GET","POST"])
 def result():
-    target_img = os.path.join(os.getcwd() , 'static/images')
-    file = request.files['file']
-    if file and allowed_file(file.filename):
-        file.save(os.path.join(target_img , file.filename))
-        img_path = os.path.join(target_img , file.filename)
-        img = file.filename
+    if request.method == 'POST':
+    #target_img = os.path.join(os.getcwd() , 'static/images')
+        target_img = (r"C:\Users\Kacper\Desktop\github\CIFAR-10-image-classification\CIFAR-10-image-classification\static")
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            file.save(os.path.join(target_img , file.filename))
+            img_path = os.path.join(target_img , file.filename)
+            img = file.filename
     #Loads the file name into a static/images folder to be used for the prediction 
-    if request.referrer.endswith('/model'):
-        model = models['CNN Model']
-    elif request.referrer.endswith('/transferModel'):
-        model = models['Transfer Model']
-    elif request.referrer.endswith('/rCNNModel'):
-        model = models['RCNN Model']
+        if request.referrer.endswith('/model'):
+            model = models['CNN Model']
+            img_size = 256
+        elif request.referrer.endswith('/transferModel'):
+            model = models['Transfer Model']
+            img_size = 224
+        elif request.referrer.endswith('/rCNNModel'):
+            model = models['RCNN Model']
+            img_size = 256
     # if else statement to determin which model to laod
-    class_result , prob_result = predict(img_path , model)
-    predictions = {
+        class_result , prob_result = predict(img_path , model, img_size)
+        predictions = {
         "class1":class_result[0],
         "class2":class_result[1],
         "class3":class_result[2],
@@ -111,7 +116,8 @@ def result():
         "prob2": prob_result[1],
         "prob3": prob_result[2],}
     #produces a list of predictions
-    return render_template('result.html', img = img, predictions = predictions)
-
+        return render_template('result.html', img = img, predictions = predictions)
+    else:
+        return 404
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000,debug = True)

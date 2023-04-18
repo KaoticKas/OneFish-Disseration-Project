@@ -1,12 +1,5 @@
 {% extends 'base.html'%}
 {%block content%}
-
-<div class = "second-main" style = "height: 100% , width : 100%;">
-    <nav>
-        <ul style = "padding-right: 2%;" class = "main-nav">
-            <li><a href ="/">HomePage</a></li>                
-        </ul>
-       
     </nav>
     <div class = "header-content-sub">
         <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
@@ -26,7 +19,8 @@
             <h3 class = "header-text">Model Prediction</h3>
         </row>
         <row style = "width: 100%; display: flex; justify-content: center;">
-            <table class="table-bordered text-light table-custom">
+
+            <table class="table-info">
                 <tr>
                     <th>Rank</th>
                     <th>Class</th>
