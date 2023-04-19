@@ -1,5 +1,5 @@
 import os
-from PIL import Image
+import uuid
 from tensorflow.keras.models import load_model
 from flask import Flask , render_template  , request , send_file
 from tensorflow.keras.preprocessing.image import load_img , img_to_array
@@ -19,7 +19,7 @@ def allowed_file(filename):
 
 img_dir = "C:/Users/Kacper/Desktop/github/OneFish-Disseration-Project/Model/img"
 
-classes =[] # creates categories based on the names of the folders
+classes = [] # creates categories based on the names of the folders
 
 for x in os.listdir(img_dir):
     classes.append(x)
@@ -28,7 +28,7 @@ for x in os.listdir(img_dir):
 models = {}  # create a dictionary to hold the models
 
 def predict(filename , model, img_size):
-    num_probablities = 3
+    display_probs = 3
     img = load_img(filename , target_size = (img_size , img_size))
     img = img_to_array(img)
     img = img.reshape(1 , img_size ,img_size ,3)
@@ -44,11 +44,11 @@ def predict(filename , model, img_size):
     res = result[0]
     res.sort()
     res = res[::-1]
-    prob = res[:num_probablities]
+    prob = res[:display_probs]
     
     prob_result = []
     class_result = []
-    for i in range(num_probablities):
+    for i in range(display_probs):
         prob_result.append((prob[i]*100).round(2))
         class_result.append(dict_result[prob[i]])
     # makes two lists with the percentage probablility of the image and what top 3 classes it is.
@@ -61,11 +61,11 @@ def predict(filename , model, img_size):
 def home():
     return render_template('index.html')
 
-@app.route('/model')
+@app.route('/cnnModel')
 
 def cnnModel():
     title = 'CNN Model'
-    models[title] = load_model(os.path.join(BASE_DIR , 'modelV3.hdf5'))
+    models[title] = load_model(os.path.join(BASE_DIR , 'ModelV3.hdf5'))
 
     return render_template('model.html', title = title )
 
@@ -77,7 +77,7 @@ def transferModel():
 
     return render_template('model.html', title = title)
 
-@app.route('/rCNNModel')
+@app.route('/rcnnModel')
 
 def rcnnModel():
     title = 'RCNN Model'
@@ -89,20 +89,21 @@ def rcnnModel():
 @app.route('/result', methods =["GET","POST"])
 def result():
     #target_img = os.path.join(os.getcwd() , 'static/images')
-    target_img = (r"C:\Users\Kacper\Desktop\github\CIFAR-10-image-classification\CIFAR-10-image-classification\static")
+    target_img = (r"C:\Users\Kacper\Desktop\github\OneFish-Disseration-Project\frontend\static\images")
     file = request.files['file']
     if file and allowed_file(file.filename):
-        file.save(os.path.join(target_img , file.filename))
-        img_path = os.path.join(target_img , file.filename)
-        img = file.filename
+        unique_name = str(uuid.uuid4())[:8] + "_" +file.filename
+        file.save(os.path.join(target_img , unique_name))
+        img_path = os.path.join(target_img , unique_name)
+        img = unique_name
     #Loads the file name into a static/images folder to be used for the prediction 
-    if request.referrer.endswith('/model'):
+    if request.referrer.endswith('/cnnModel'):
         model = models['CNN Model']
         img_size = 256
     elif request.referrer.endswith('/transferModel'):
         model = models['Transfer Model']
         img_size = 224
-    elif request.referrer.endswith('/rCNNModel'):
+    elif request.referrer.endswith('/rcnnModel'):
         model = models['RCNN Model']
         img_size = 256
     # if else statement to determin which model to laod
@@ -113,8 +114,10 @@ def result():
         "class3":class_result[2],
         "prob1": prob_result[0],
         "prob2": prob_result[1],
-        "prob3": prob_result[2],}
+        "prob3": prob_result[2],
+        }
     #produces a list of predictions
+    print(img)
     return render_template('result.html', img = img, predictions = predictions)
 
 
