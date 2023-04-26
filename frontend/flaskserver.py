@@ -8,12 +8,12 @@ from tensorflow.keras.preprocessing.image import load_img , img_to_array
 app = Flask(__name__)
 #initalising the flask server
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ALLOWED_EXT = set(['jpg' , 'jpeg' , 'png' , 'jfif'])
+root_dir = os.path.dirname(os.path.abspath(__file__))
+extensions = set(['jpg' , 'jpeg' , 'png' , 'jfif']) # allowed file formats
 
 def allowed_file(filename):
     return '.' in filename and \
-           filename.rsplit('.', 1)[1] in ALLOWED_EXT
+           filename.rsplit('.', 1)[1] in extensions
 #checks if the file passed to the server is of a required type
 
 
@@ -30,15 +30,13 @@ models = {}  # create a dictionary to hold the models
 def predict(filename , model, img_size):
     display_probs = 3
     img = load_img(filename , target_size = (img_size , img_size))
-    img = img_to_array(img)
-    img = img.reshape(1 , img_size ,img_size ,3)
+    img = img_to_array(img).reshape(1 , img_size ,img_size ,3)
     # loads the image and resizes it to what the models were trained on
-    img = img.astype('float32')
     img = img/255.0
     result = model.predict(img)
     #normalises the image and passes it to the model
     dict_result = {}
-    for i in range(30):
+    for i in range(len(classes)):
         dict_result[result[0][i]] = classes[i]
     #takes the model results and makes a dictonary with the key being the class name
     res = result[0]
@@ -65,7 +63,7 @@ def home():
 
 def cnnModel():
     title = 'CNN Model'
-    models[title] = load_model(os.path.join(BASE_DIR , 'ModelV3.hdf5'))
+    models[title] = load_model(os.path.join(root_dir , 'ModelV3.hdf5'))
 
     return render_template('model.html', title = title )
 
@@ -73,7 +71,7 @@ def cnnModel():
 
 def transferModel():
     title = 'Transfer Model'
-    models[title] = load_model(os.path.join(BASE_DIR , 'modelTransfer.hdf5'))
+    models[title] = load_model(os.path.join(root_dir , 'modelTransfer.hdf5'))
 
     return render_template('model.html', title = title)
 
@@ -82,7 +80,7 @@ def transferModel():
 def rcnnModel():
     title = 'RCNN Model'
 
-    models[title] = load_model(os.path.join(BASE_DIR , 'modelV3.hdf5'))
+    models[title] = load_model(os.path.join(root_dir , 'modelV3.hdf5'))
     return render_template('model.html', title = title)
 
 
@@ -99,14 +97,14 @@ def result():
     #Loads the file name into a static/images folder to be used for the prediction 
     if request.referrer.endswith('/cnnModel'):
         model = models['CNN Model']
-        img_size = 256
+        img_size = 255 # set image size to required size
     elif request.referrer.endswith('/transferModel'):
         model = models['Transfer Model']
         img_size = 224
     elif request.referrer.endswith('/rcnnModel'):
         model = models['RCNN Model']
-        img_size = 256
-    # if else statement to determin which model to laod
+        img_size = 255
+    # if else statement to determin which model to load 
     class_result , prob_result = predict(img_path , model, img_size)
     predictions = {
         "class1":class_result[0],
@@ -117,7 +115,6 @@ def result():
         "prob3": prob_result[2],
         }
     #produces a list of predictions
-    print(img)
     return render_template('result.html', img = img, predictions = predictions)
 
 
