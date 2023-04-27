@@ -43,7 +43,7 @@ def predict(filename , model, img_size):
     res.sort()
     res = res[::-1]
     prob = res[:display_probs]
-    
+    #takes top 3 highest model predicitons into a list.    
     prob_result = []
     class_result = []
     for i in range(display_probs):
