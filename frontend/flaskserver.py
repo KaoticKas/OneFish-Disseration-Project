@@ -13,7 +13,7 @@ extensions = set(['jpg' , 'jpeg' , 'png' , 'jfif']) # allowed file formats
 
 def allowed_file(filename):
     return '.' in filename and \
-           filename.rsplit('.', 1)[1] in extensions
+     filename.rsplit('.', 1)[1].lower() in extensions
 #checks if the file passed to the server is of a required type
 
 
@@ -83,6 +83,10 @@ def rcnnModel():
     models[title] = load_model(os.path.join(root_dir , 'modelV3.hdf5'))
     return render_template('model.html', title = title)
 
+@app.route('/help')
+
+def help():
+    return render_template('help.html')
 
 @app.route('/result', methods =["GET","POST"])
 def result():
