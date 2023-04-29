@@ -25,5 +25,15 @@
         </div>
       </div>
     </div>
+  
+  {% if error_msg%}
+
+  <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+    {{error_msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %}
+
     <!-- adapted from https://getbootstrap.com/docs/5.0/examples/carousel/ (accessed 25/04/23)-->
 {%endblock%}
+
