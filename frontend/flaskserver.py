@@ -75,14 +75,14 @@ def transferModel():
 
     return render_template('model.html', title = title)
 
-@app.route('/rcnnModel')
+@app.route('/model3')
 
-def rcnnModel():
-    title = 'RCNN Model'
+def model3():
+    title = 'Model3'
 
     models[title] = load_model(os.path.join(root_dir , 'modelV3.hdf5'))
     return render_template('model.html', title = title)
-
+    #routes to one of the models and preloads the model.
 @app.route('/help')
 
 def help():
@@ -90,43 +90,49 @@ def help():
 
 @app.route('/result', methods =["GET","POST"])
 def result():
-    error_msg = ""
-    #target_img = os.path.join(os.getcwd() , 'static/images')
-    target_img = (r"C:\Users\Kacper\Desktop\github\OneFish-Disseration-Project\frontend\static\images")
-    file = request.files['file']
-    if file and allowed_file(file.filename):
-        unique_name = str(uuid.uuid4())[:8] + "_" +file.filename
-        file.save(os.path.join(target_img , unique_name))
-        img_path = os.path.join(target_img , unique_name)
-        img = unique_name
-    #Loads the file name into a static/images folder to be used for the prediction
-        if request.referrer.endswith('/cnnModel'):
-            model = models['CNN Model']
-            img_size = 256 # set image size to required size
-        elif request.referrer.endswith('/transferModel'):
-            model = models['Transfer Model']
-            img_size = 224
-        elif request.referrer.endswith('/rcnnModel'):
-            model = models['RCNN Model']
-            img_size = 255
-        else:
-            model = models['CNN Model']
-            img_size = 256
+    if request.method == "POST":
+        error_msg = ""
+        target_img = (r"C:\Users\Kacper\Desktop\github\OneFish-Disseration-Project\frontend\static\images")
+        #saves the file directionary for public deployment , the OS function should be used
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            unique_name = str(uuid.uuid4())[:8] + "_" +file.filename
+            file.save(os.path.join(target_img , unique_name))
+            img_path = os.path.join(target_img , unique_name)
+            img = unique_name
+            #Loads the file name into a static/images folder to be used for the prediction
+            if request.referrer.endswith('/cnnModel'):
+                model = models['CNN Model']
+                img_size = 256 # set image size to required size
+            elif request.referrer.endswith('/transferModel'):
+                model = models['Transfer Model']
+                img_size = 224
+            elif request.referrer.endswith('/model3'):
+                model = models['Model3']
+                img_size = 256
+            else:
+                model = models['CNN Model']
+                img_size = 256
     # if else statement to determin which model to load 
-        class_result , prob_result = predict(img_path, model, img_size)
-        predictions = {
-            "class1":class_result[0],
-            "class2":class_result[1],
-            "class3":class_result[2],
-            "prob1": prob_result[0],
-            "prob2": prob_result[1],
-            "prob3": prob_result[2],
-            }
-        #produces a list of predictions
-        return render_template('result.html', img = img, predictions = predictions)
+            class_result , prob_result = predict(img_path, model, img_size)
+            predictions = {
+                "class1":class_result[0],
+                "class2":class_result[1],
+                "class3":class_result[2],
+                "prob1": prob_result[0],
+                "prob2": prob_result[1],
+                "prob3": prob_result[2],
+                }
+        #produces a list of predictions to feed into results page
+            return render_template('result.html', img = img, predictions = predictions)
+        else:
+            error_msg = "the was no image uploaded or the file type was not supported, Please Choose an Image that is of type PNG, JPG or JFIF"
+            return render_template('index.html', error_msg = error_msg)
+        #error catch
     else:
-        error_msg = "the was no image uploaded or the file type was not supported, Please Choose an Image that is of type PNG, JPG or JFIF"
+        error_msg = "method was not POST"
         return render_template('index.html', error_msg = error_msg)
+    #error catch
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000,debug = True)
