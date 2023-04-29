@@ -101,7 +101,7 @@ def result():
     #Loads the file name into a static/images folder to be used for the prediction 
     if request.referrer.endswith('/cnnModel'):
         model = models['CNN Model']
-        img_size = 255 # set image size to required size
+        img_size = 256 # set image size to required size
     elif request.referrer.endswith('/transferModel'):
         model = models['Transfer Model']
         img_size = 224
