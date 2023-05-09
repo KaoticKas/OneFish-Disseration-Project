@@ -17,10 +17,11 @@ def allowed_file(filename):
 #checks if the file passed to the server is of a required type
 
 
-img_dir = "C:/Users/Kacper/Desktop/github/OneFish-Disseration-Project/Model/img"
-
+img_dir = os.path.join(os.getcwd() , 'Model\img')
 classes = [] # creates categories based on the names of the folders
 
+
+print(img_dir)
 for x in os.listdir(img_dir):
     classes.append(x)
 # makes a list of fish species based on folder names
@@ -63,15 +64,15 @@ def home():
 
 def cnnModel():
     title = 'CNN Model'
-    models[title] = load_model(os.path.join(root_dir , 'ModelV3.hdf5'))
-
+    models[title] = load_model(os.path.join(root_dir , 'models\ModelV3.hdf5'))
+    # loads the model into dictonary models with the Models name as the key
     return render_template('model.html', title = title )
 
 @app.route('/transferModel')
 
 def transferModel():
     title = 'Transfer Model'
-    models[title] = load_model(os.path.join(root_dir , 'modelTransfer.hdf5'))
+    models[title] = load_model(os.path.join(root_dir , 'models\modelTransfer.hdf5'))
 
     return render_template('model.html', title = title)
 
@@ -80,7 +81,7 @@ def transferModel():
 def model3():
     title = 'Model3'
 
-    models[title] = load_model(os.path.join(root_dir , 'modelV3.hdf5'))
+    models[title] = load_model(os.path.join(root_dir , 'models\modelV3.hdf5'))
     return render_template('model.html', title = title)
     #routes to one of the models and preloads the model.
 @app.route('/help')
@@ -92,8 +93,8 @@ def help():
 def result():
     if request.method == "POST":
         error_msg = ""
-        target_img = (r"C:\Users\Kacper\Desktop\github\OneFish-Disseration-Project\frontend\static\images")
-        #saves the file directionary for public deployment , the OS function should be used
+        target_img = os.path.join(root_dir, 'static\images') 
+        #assigns the image directory for the image to be classified by using the OS Module.
         file = request.files['file']
         if file and allowed_file(file.filename):
             unique_name = str(uuid.uuid4())[:8] + "_" +file.filename
